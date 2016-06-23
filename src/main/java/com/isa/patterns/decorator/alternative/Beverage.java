@@ -6,7 +6,6 @@ public abstract class Beverage {
 	
 	/**
 	 *  This will be reused for concrete components by changing only description variable, not with overriding.
-	 *  But for condiments code will be changed
 	 * @return
 	 */
 	public String getDescription(){
