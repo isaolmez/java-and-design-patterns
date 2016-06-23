@@ -14,7 +14,9 @@ public class WeatherData implements Subject {
 	}
 
 	public void registerObserver(Observer observer) {
-		this.observers.add(observer);
+		if(!observers.contains(observer)){
+			this.observers.add(observer);	
+		}
 	}
 
 	public void removeObserver(Observer observer) {
