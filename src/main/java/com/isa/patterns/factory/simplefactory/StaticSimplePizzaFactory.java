@@ -1,4 +1,4 @@
-package com.isa.patterns.simplefactory;
+package com.isa.patterns.factory.simplefactory;
 
 public class StaticSimplePizzaFactory {
 	public static Pizza createPizza(String type) {
@@ -8,9 +8,7 @@ public class StaticSimplePizzaFactory {
 			pizza = new CheesePizza();
 		} else if (type.equals("clam")) {
 			pizza = new ClamPizza();
-		} else if (type.equals("veggie")) {
-			pizza = new VeggiePizza();
-		}
+		} 
 
 		return pizza;
 	}

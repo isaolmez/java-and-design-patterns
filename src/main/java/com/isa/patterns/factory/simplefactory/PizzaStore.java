@@ -1,4 +1,4 @@
-package com.isa.patterns.simplefactory;
+package com.isa.patterns.factory.simplefactory;
 
 public class PizzaStore {
 	SimplePizzaFactory factory;
