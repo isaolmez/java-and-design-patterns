@@ -1,23 +1,24 @@
 package com.isa.patterns.state;
 
 public class GumballMachine {
-	private State state;
-	private int gumballCount;
 	private State noQuarterState;
 	private State soldOutState;
 	private State soldState;
 	private State hasQuarterState;
-
+	private State state = soldOutState;
+	private int gumballCount;
+	
 	public GumballMachine(int gumballCount) {
-		this.state = new NoQuarterState(this);
-		this.gumballCount = gumballCount;
 		this.noQuarterState = new NoQuarterState(this);
 		this.soldOutState = new SoldOutState(this);
 		this.soldState = new SoldState(this);
 		this.hasQuarterState = new HasQuarterState(this);
-		System.out.println(state);
+		this.gumballCount = gumballCount;
+		
 		if (gumballCount > 0) {
 			state = noQuarterState;
+		}else{
+			state = soldOutState;
 		}
 	}
 
@@ -71,5 +72,10 @@ public class GumballMachine {
 
 	public State getHasQuarterState() {
 		return hasQuarterState;
+	}
+
+	@Override
+	public String toString() {
+		return "GumballMachine [state=" + state + ", gumballCount=" + gumballCount + "]";
 	}
 }

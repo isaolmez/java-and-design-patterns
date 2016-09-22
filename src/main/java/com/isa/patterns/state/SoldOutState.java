@@ -9,25 +9,26 @@ public class SoldOutState implements State {
 
 	@Override
 	public void insertQuarter() {
-		// TODO Auto-generated method stub
-
+		System.out.println("There are no gumballs left");
 	}
 
 	@Override
 	public void ejectQuarter() {
-		// TODO Auto-generated method stub
-
+		System.out.println("There are no gumballs left");
 	}
 
 	@Override
 	public void turnCrank() {
-		// TODO Auto-generated method stub
-
+		System.out.println("There are no gumballs left");
 	}
 
 	@Override
 	public void dispense() {
-		// TODO Auto-generated method stub
+		System.out.println("There are no gumballs left");
+	}
 
+	@Override
+	public String toString() {
+		return "SoldOutState: No gumballs left";
 	}
 }
