@@ -4,7 +4,7 @@ package com.isa.patterns.singleton.v3;
  *  Double-checked locking, Thread-safe
  */
 public class Singleton {
-	private static Singleton instance;
+	private static volatile Singleton instance;
 	
 	private Singleton(){	
 	}
