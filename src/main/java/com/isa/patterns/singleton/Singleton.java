@@ -1,6 +1,6 @@
 package com.isa.patterns.singleton;
 /**
- *	Vanilla implementation, Not thread-safe 
+ *	Vanilla implementation. Lazy init. Not thread-safe 
  */
 public class Singleton {
 	private static Singleton instance;
@@ -15,5 +15,4 @@ public class Singleton {
 		
 		return instance;
 	}
-	
 }
