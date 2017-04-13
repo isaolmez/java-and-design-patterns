@@ -6,14 +6,17 @@ package com.isa.patterns.singleton.lazy.v2;
 public class Singleton {
 	private static volatile Singleton instance;
 	
-	private Singleton(){	
+	private Singleton(){
+		if(instance != null){
+			throw new IllegalStateException("Already instantiated");
+		}
 	}
 	
 	public static Singleton getInstance(){
 		if(instance == null){
 			synchronized (Singleton.class) {
 				if(instance == null){
-					instance = new Singleton();	
+					instance = new Singleton();
 				}
 			}
 		}

@@ -5,9 +5,4 @@ package com.isa.patterns.singleton.eager.v3;
  */
 public enum Singleton {
 	INSTANCE;
-	private String val;
-
-    public String getVal() {
-        return val;
-    }
 }

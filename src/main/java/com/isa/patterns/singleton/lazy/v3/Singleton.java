@@ -9,6 +9,9 @@ public class Singleton {
 	}
 
 	private Singleton() {
+		if(SingletonHolder.INSTANCE != null){
+            throw new IllegalStateException("Already instantiated");
+        }
 	}
 
 	public static Singleton getInstance() {
