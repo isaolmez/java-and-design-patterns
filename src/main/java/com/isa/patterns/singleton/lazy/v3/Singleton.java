@@ -5,14 +5,14 @@ package com.isa.patterns.singleton.lazy.v3;
  */
 public class Singleton {
 	private static class SingletonHolder {
-		static final Singleton instance = new Singleton();
+		static final Singleton INSTANCE = new Singleton();
 	}
 
 	private Singleton() {
 	}
 
 	public static Singleton getInstance() {
-		return SingletonHolder.instance;
+		return SingletonHolder.INSTANCE;
 	}
 
 }

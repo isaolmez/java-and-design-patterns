@@ -21,6 +21,7 @@ public class GenericInvocationHandler implements InvocationHandler {
 		if (permittedOperations.contains(method.getName())) {
 			return method.invoke(user, args);
 		} else {
+			System.out.println("Not allowed");
 			return null;
 		}
 	}

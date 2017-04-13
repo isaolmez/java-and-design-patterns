@@ -16,7 +16,8 @@ public class ReadOnlyInvocationHandler implements InvocationHandler {
 		if (method.getName().equals("read") || method.getName().equals("login")) {
 			return method.invoke(user, args);
 		} else {
-			return new IllegalAccessException("Not allowed");
+			System.out.println("Not allowed");
+			return null;
 		}
 	}
 }

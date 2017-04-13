@@ -8,7 +8,7 @@ public class PancakeHouseMenu implements Menu<MenuItem>{
 
 	public PancakeHouseMenu() {
 		menu = new ArrayList<>();
-		this.addItem("Cake", "A classic cake", false, 2.2);
+		this.addItem("Cake", "A protecting cake", false, 2.2);
 	}
 
 	public void addItem(String name, String description, boolean vegetarian, double price) {

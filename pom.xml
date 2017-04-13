@@ -3,6 +3,13 @@
   <groupId>com.isa</groupId>
   <artifactId>design_patterns_java</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
+	</dependencies>
   <build>
 		<plugins>
 			<plugin>
