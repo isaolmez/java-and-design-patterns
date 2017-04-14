@@ -15,7 +15,7 @@ public class Person {
 
     private final List<String> hobbies;
 
-    public Person(String name, String lastName, int age, String profession, List<String> hobbies) {
+    private Person(String name, String lastName, int age, String profession, List<String> hobbies) {
         this.name = name;
         this.lastName = lastName;
         this.age = age;
