@@ -1,13 +1,14 @@
-package com.isa.patterns.proxy.delaying;
+package com.isa.patterns.proxy.lazyloading;
 
-public class DelayingServiceProxy implements ExpensiveService {
+public class LazyLoadingServiceProxy implements ExpensiveService {
     @Override
     public void create() {
         ValueHolder.INSTANCE.create();
     }
 
     private static class ValueHolder {
-        private ValueHolder(){}
+        private ValueHolder() {
+        }
 
         static final ExpensiveService INSTANCE = new ExpensiveServiceImpl();
     }
