@@ -2,9 +2,9 @@ package com.isa.patterns.bridge;
 
 public interface Television {
 
-	boolean on();
+  boolean on();
 
-	boolean off();
+  boolean off();
 
-	void tuneVolume(int newValue);
+  void tuneVolume(int newValue);
 }

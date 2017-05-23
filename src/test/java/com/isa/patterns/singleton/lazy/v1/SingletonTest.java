@@ -10,18 +10,18 @@ import static org.junit.Assert.assertNotNull;
 @RunWith(JUnit4.class)
 public class SingletonTest {
 
-    @Test
-    public void shouldFetch() {
-        Singleton instance = Singleton.getInstance();
+  @Test
+  public void shouldFetch() {
+    Singleton instance = Singleton.getInstance();
 
-        assertNotNull(instance);
-    }
+    assertNotNull(instance);
+  }
 
-    @Test
-    public void shouldFetchSame() {
-        Singleton initial = Singleton.getInstance();
-        Singleton actual = Singleton.getInstance();
+  @Test
+  public void shouldFetchSame() {
+    Singleton initial = Singleton.getInstance();
+    Singleton actual = Singleton.getInstance();
 
-        assertEquals(initial, actual);
-    }
+    assertEquals(initial, actual);
+  }
 }

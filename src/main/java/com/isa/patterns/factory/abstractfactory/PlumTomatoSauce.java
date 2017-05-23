@@ -1,5 +1,3 @@
 package com.isa.patterns.factory.abstractfactory;
 
-public class PlumTomatoSauce implements Sauce{
-
-}
+public class PlumTomatoSauce implements Sauce {}
