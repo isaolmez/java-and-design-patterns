@@ -6,32 +6,25 @@ import java.util.List;
 public class ProfessionBuilders {
 
   /** Static factory methods */
-  public static EngineerBuilder newEngineer() {
+  public static ProfessionBuilder<Engineer> newEngineer() {
     return new EngineerBuilder();
   }
 
-  public static PilotBuilder newPilot() {
+  public static ProfessionBuilder<Pilot> newPilot() {
     return new PilotBuilder();
   }
 
   /** Pilot Builder */
-  public static class PilotBuilder extends AbstractProfessionBuilder<Pilot, PilotBuilder> {
-
-    private PlaneType planeType;
-
-    public PilotBuilder planeType(PlaneType planeType) {
-      this.planeType = planeType;
-      return this;
-    }
+  static class PilotBuilder extends AbstractProfessionBuilder<Pilot> {
 
     @Override
     protected Pilot internalBuild() {
-      return new Pilot(this.name, this.salary, this.isPrivateSector, this.duties, this.planeType);
+      return new Pilot(this.name, this.salary, this.isPrivateSector, this.duties);
     }
   }
 
   /** Engineer Builder */
-  public static class EngineerBuilder extends AbstractProfessionBuilder<Engineer, EngineerBuilder> {
+  static class EngineerBuilder extends AbstractProfessionBuilder<Engineer> {
 
     @Override
     protected Engineer internalBuild() {
@@ -39,9 +32,8 @@ public class ProfessionBuilders {
     }
   }
 
-  abstract static class AbstractProfessionBuilder<
-          T extends Profession, B extends AbstractProfessionBuilder<T, B>>
-      implements ProfessionBuilder<T, B> {
+  abstract static class AbstractProfessionBuilder<T extends Profession>
+      implements ProfessionBuilder<T> {
 
     String name;
 
@@ -52,39 +44,39 @@ public class ProfessionBuilders {
     List<String> duties = new ArrayList<>();
 
     @Override
-    public B name(String name) {
+    public ProfessionBuilder<T> name(String name) {
       if (name == null || name.isEmpty()) {
         throw new IllegalArgumentException("Name cannot be empty");
       }
 
       this.name = name;
-      return (B) this;
+      return this;
     }
 
     @Override
-    public B salary(double salary) {
+    public ProfessionBuilder<T> salary(double salary) {
       if (salary < 0) {
         throw new IllegalArgumentException("Salary cannot be smaller than 0");
       }
 
       this.salary = salary;
-      return (B) this;
+      return this;
     }
 
     @Override
-    public B privateSector(boolean isPrivateSector) {
+    public ProfessionBuilder<T> privateSector(boolean isPrivateSector) {
       this.isPrivateSector = isPrivateSector;
-      return (B) this;
+      return this;
     }
 
     @Override
-    public B duty(String duty) {
+    public ProfessionBuilder<T> duty(String duty) {
       if (duty == null || duty.isEmpty()) {
         throw new IllegalArgumentException("Duty cannot be empty");
       }
 
       duties.add(duty);
-      return (B) this;
+      return this;
     }
 
     public T build() {

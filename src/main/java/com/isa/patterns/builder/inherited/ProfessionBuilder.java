@@ -1,13 +1,13 @@
 package com.isa.patterns.builder.inherited;
 
-public interface ProfessionBuilder<T extends Profession, B extends ProfessionBuilder<T, B>> {
-  B name(String name);
+public interface ProfessionBuilder<T extends Profession> {
+  ProfessionBuilder<T> name(String name);
 
-  B salary(double salary);
+  ProfessionBuilder<T> salary(double salary);
 
-  B privateSector(boolean isPrivateSector);
+  ProfessionBuilder<T> privateSector(boolean isPrivateSector);
 
-  B duty(String duty);
+  ProfessionBuilder<T> duty(String duty);
 
   T build();
 }

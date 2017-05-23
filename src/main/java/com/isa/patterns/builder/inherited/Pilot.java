@@ -4,16 +4,8 @@ import java.util.List;
 
 public class Pilot extends Profession {
 
-  private final PlaneType planeType;
-
-  public Pilot(
-      String name,
-      double salary,
-      boolean isPrivateSector,
-      List<String> duties,
-      PlaneType planeType) {
+  public Pilot(String name, double salary, boolean isPrivateSector, List<String> duties) {
     super(name, salary, isPrivateSector, duties);
-    this.planeType = planeType;
   }
 
   @Override

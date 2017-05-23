@@ -18,7 +18,6 @@ public class ClientMain {
             .salary(100)
             .privateSector(true)
             .duty("Fly")
-            .planeType(PlaneType.AIRBUS)
             .build();
     System.out.println(pilot);
   }
