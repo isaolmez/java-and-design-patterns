@@ -1,4 +1,4 @@
-package com.isa.patterns.builder.builderfactory;
+package com.isa.patterns.builder.inherited;
 
 import java.util.ArrayList;
 import java.util.List;

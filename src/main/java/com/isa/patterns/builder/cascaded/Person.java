@@ -1,7 +1,7 @@
 package com.isa.patterns.builder.cascaded;
 
 import com.google.common.base.Objects;
-import com.isa.patterns.builder.builderfactory.Profession;
+import com.isa.patterns.builder.inherited.Profession;
 
 import java.util.ArrayList;
 import java.util.Collections;
