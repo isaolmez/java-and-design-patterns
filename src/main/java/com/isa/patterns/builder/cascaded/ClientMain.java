@@ -1,7 +1,7 @@
 package com.isa.patterns.builder.cascaded;
 
-import com.isa.patterns.builder.inherited.PlaneType;
-import com.isa.patterns.builder.inherited.ProfessionBuilders;
+import com.isa.patterns.builder.builderfactory.PlaneType;
+import com.isa.patterns.builder.builderfactory.ProfessionBuilders;
 
 public class ClientMain {
 

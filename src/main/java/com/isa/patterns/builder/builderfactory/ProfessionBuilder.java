@@ -1,4 +1,4 @@
-package com.isa.patterns.builder.inherited;
+package com.isa.patterns.builder.builderfactory;
 
 public interface ProfessionBuilder<T extends Profession, B extends ProfessionBuilder<T, B>> {
   B name(String name);

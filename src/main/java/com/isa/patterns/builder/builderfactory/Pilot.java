@@ -1,4 +1,4 @@
-package com.isa.patterns.builder.inherited;
+package com.isa.patterns.builder.builderfactory;
 
 import java.util.List;
 
