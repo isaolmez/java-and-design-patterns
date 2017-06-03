@@ -1,6 +1,7 @@
 package com.isa.patterns.proxy.caching;
 
 public class ClientMain {
+
   public static void main(String[] args) {
     Service cachingProxy = new CachingServiceProxy(new ServiceImpl());
     cachingProxy.getUsers("us");

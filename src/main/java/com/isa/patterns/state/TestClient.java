@@ -1,6 +1,7 @@
 package com.isa.patterns.state;
 
 public class TestClient {
+
   public static void main(String[] args) {
     GumballMachine gumballMachine = new GumballMachine(10);
     System.out.println(gumballMachine);

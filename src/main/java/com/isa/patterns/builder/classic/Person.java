@@ -7,6 +7,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class Person {
+
   private final String name;
 
   private final String lastName;
@@ -51,13 +52,18 @@ public class Person {
     return Objects.toStringHelper(this).add("Name", name).add("Last Name", lastName).toString();
   }
 
-  /** Static factory method */
+  /**
+   * Static factory method
+   */
   public static Builder of(String name, String lastName) {
     return new Builder(name, lastName);
   }
 
-  /** BUILDER */
+  /**
+   * BUILDER
+   */
   public static class Builder {
+
     private final String name;
 
     private final String lastName;

@@ -5,7 +5,9 @@ import java.util.List;
 
 public class ProfessionBuilders {
 
-  /** Static factory methods */
+  /**
+   * Static factory methods
+   */
   public static ProfessionBuilder<Engineer> newEngineer() {
     return new EngineerBuilder();
   }
@@ -14,7 +16,9 @@ public class ProfessionBuilders {
     return new PilotBuilder();
   }
 
-  /** Pilot Builder */
+  /**
+   * Pilot Builder
+   */
   static class PilotBuilder extends AbstractProfessionBuilder<Pilot> {
 
     @Override
@@ -23,7 +27,9 @@ public class ProfessionBuilders {
     }
   }
 
-  /** Engineer Builder */
+  /**
+   * Engineer Builder
+   */
   static class EngineerBuilder extends AbstractProfessionBuilder<Engineer> {
 
     @Override

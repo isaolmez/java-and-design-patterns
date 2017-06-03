@@ -6,6 +6,7 @@ package com.isa.patterns.state;
  * it. State clients are bound to use different state objects changing constantly at runtime.
  */
 public interface State {
+
   void insertQuarter();
 
   void ejectQuarter();

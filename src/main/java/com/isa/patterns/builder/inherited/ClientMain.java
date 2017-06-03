@@ -15,7 +15,7 @@ public class ClientMain {
     Pilot pilot =
         ProfessionBuilders.newPilot()
             .name("Pilot")
-            .salary(100)
+            .salary(200)
             .privateSector(true)
             .duty("Fly")
             .build();

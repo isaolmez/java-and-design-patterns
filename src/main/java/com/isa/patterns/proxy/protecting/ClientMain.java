@@ -1,6 +1,7 @@
 package com.isa.patterns.proxy.protecting;
 
 public class ClientMain {
+
   public static void main(String[] args) {
     User user = new SimpleUser();
     User readOnlyUser = new ReadOnlyUserProxy(user);

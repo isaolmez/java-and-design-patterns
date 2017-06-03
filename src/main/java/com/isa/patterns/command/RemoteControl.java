@@ -3,6 +3,7 @@ package com.isa.patterns.command;
 import java.util.LinkedList;
 
 public class RemoteControl {
+
   private Command[] onCommands;
   private Command[] offCommands;
   private LinkedList<Command> undoStack;

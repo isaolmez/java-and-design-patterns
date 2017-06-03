@@ -1,6 +1,7 @@
 package com.isa.patterns.compositeiterator;
 
 public class TestClient {
+
   public static void main(String[] args) {
     MenuComponent pancakeHouseMenu = new Menu("PANCAKE HOUSE MENU", "Breakfast");
     MenuComponent dinerMenu = new Menu("DINER MENU", "Lunch");

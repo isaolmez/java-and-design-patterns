@@ -3,6 +3,7 @@ package com.isa.patterns.compositeiterator;
 import java.util.Iterator;
 
 public class MenuComponent {
+
   public void add(MenuComponent menuComponent) {
     throw new UnsupportedOperationException();
   }

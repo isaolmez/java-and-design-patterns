@@ -1,7 +1,10 @@
 package com.isa.patterns.singleton.lazy.v1;
 
-/** Synchronized implementation. Lazy init. Thread-safe */
+/**
+ * Synchronized implementation. Lazy init. Thread-safe
+ */
 public class Singleton {
+
   private static Singleton instance;
 
   private Singleton() {

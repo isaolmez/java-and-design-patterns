@@ -6,6 +6,7 @@ package com.isa.patterns.decorator.alternative;
  * should be used.
  */
 public class CondimentDecorator extends Beverage {
+
   protected Beverage beverage;
   protected double cost;
 

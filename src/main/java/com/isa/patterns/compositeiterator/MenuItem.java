@@ -3,6 +3,7 @@ package com.isa.patterns.compositeiterator;
 import java.util.Iterator;
 
 public class MenuItem extends MenuComponent {
+
   private String name;
   private String description;
   private double price;

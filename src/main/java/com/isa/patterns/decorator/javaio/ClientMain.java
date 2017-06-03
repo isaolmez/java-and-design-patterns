@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class ClientMain {
+
   public static void main(String[] args) throws IOException {
     String filePath =
         Thread.currentThread().getContextClassLoader().getResource("test.txt").getPath();

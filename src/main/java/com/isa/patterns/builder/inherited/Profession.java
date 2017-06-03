@@ -1,10 +1,12 @@
 package com.isa.patterns.builder.inherited;
 
+import com.google.common.base.Objects;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public abstract class Profession {
+
   private final String name;
 
   private final double salary;
@@ -40,16 +42,7 @@ public abstract class Profession {
 
   @Override
   public String toString() {
-    return "Profession{"
-        + "name='"
-        + name
-        + '\''
-        + ", salary="
-        + salary
-        + ", isPrivateSector="
-        + isPrivateSector
-        + ", duties="
-        + duties
-        + '}';
+    return Objects.toStringHelper(this).add("name", name).add("Salary", salary)
+        .add("Private Sector", isPrivateSector).add("Duties", duties).toString();
   }
 }

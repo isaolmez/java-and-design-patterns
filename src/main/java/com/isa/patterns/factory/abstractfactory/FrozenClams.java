@@ -1,3 +1,5 @@
 package com.isa.patterns.factory.abstractfactory;
 
-public class FrozenClams implements Clams {}
+public class FrozenClams implements Clams {
+
+}

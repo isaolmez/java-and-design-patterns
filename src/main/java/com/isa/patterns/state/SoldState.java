@@ -1,6 +1,7 @@
 package com.isa.patterns.state;
 
 public class SoldState implements State {
+
   private GumballMachine gumballMachine;
 
   public SoldState(GumballMachine gumballMachine) {

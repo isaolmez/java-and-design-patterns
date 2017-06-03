@@ -1,6 +1,7 @@
 package com.isa.patterns.factory.factorymethod;
 
 public class ClientMain {
+
   public static void main(String[] args) {
     System.out.println("###NY Pizza Store###");
     PizzaStore store = new NYPizzaStore();

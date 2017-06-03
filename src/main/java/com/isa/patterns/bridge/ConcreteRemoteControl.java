@@ -1,6 +1,7 @@
 package com.isa.patterns.bridge;
 
 public class ConcreteRemoteControl extends RemoteControl {
+
   private int volume;
 
   public ConcreteRemoteControl(Television television) {

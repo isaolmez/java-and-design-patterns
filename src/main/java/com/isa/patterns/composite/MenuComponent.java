@@ -1,6 +1,7 @@
 package com.isa.patterns.composite;
 
 public class MenuComponent {
+
   public void add(MenuComponent menuComponent) {
     throw new UnsupportedOperationException();
   }

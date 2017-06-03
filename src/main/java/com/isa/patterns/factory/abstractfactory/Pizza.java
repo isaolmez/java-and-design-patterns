@@ -1,6 +1,7 @@
 package com.isa.patterns.factory.abstractfactory;
 
 public abstract class Pizza {
+
   protected String name;
   protected Dough dough;
   protected Sauce sauce;

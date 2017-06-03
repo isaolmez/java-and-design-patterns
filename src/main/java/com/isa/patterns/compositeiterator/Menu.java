@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class Menu extends MenuComponent {
+
   private List<MenuComponent> menuItems;
   private String name;
   private String description;

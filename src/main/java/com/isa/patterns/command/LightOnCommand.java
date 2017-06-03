@@ -1,6 +1,7 @@
 package com.isa.patterns.command;
 
 public class LightOnCommand implements Command {
+
   private Light light;
 
   public LightOnCommand(Light light) {

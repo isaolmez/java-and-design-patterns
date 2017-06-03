@@ -8,6 +8,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class Person {
+
   private final String name;
 
   private final String lastName;
@@ -19,7 +20,7 @@ public class Person {
   private final List<String> hobbies;
 
   private Person(
-          String name, String lastName, int age, Profession profession, List<String> hobbies) {
+      String name, String lastName, int age, Profession profession, List<String> hobbies) {
     this.name = name;
     this.lastName = lastName;
     this.age = age;
@@ -49,16 +50,22 @@ public class Person {
 
   @Override
   public String toString() {
-    return Objects.toStringHelper(this).add("Name", name).add("Last Name", lastName).toString();
+    return Objects.toStringHelper(this).add("Name", name).add("Last Name", lastName)
+        .add("Profession", profession.toString()).toString();
   }
 
-  /** Static factory method */
+  /**
+   * Static factory method
+   */
   public static Builder of(String name, String lastName) {
     return new Builder(name, lastName);
   }
 
-  /** BUILDER */
+  /**
+   * BUILDER
+   */
   public static class Builder {
+
     private final String name;
 
     private final String lastName;

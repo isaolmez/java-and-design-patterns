@@ -1,6 +1,7 @@
 package com.isa.patterns.facade;
 
 public class HomeTheaterFacade {
+
   Amplifier amp;
   Tuner tuner;
   DvdPlayer dvd;

@@ -6,6 +6,7 @@ import com.isa.patterns.strategy.algorithms.Quack;
 import com.isa.patterns.strategy.algorithms.Squeak;
 
 public class MainClient {
+
   public static void main(String[] args) {
     System.out.println("*** Mallard Duck");
     Duck md = new MallardDuck();

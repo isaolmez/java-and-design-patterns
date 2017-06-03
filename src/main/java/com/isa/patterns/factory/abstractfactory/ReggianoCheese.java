@@ -1,3 +1,5 @@
 package com.isa.patterns.factory.abstractfactory;
 
-public class ReggianoCheese implements Cheese {}
+public class ReggianoCheese implements Cheese {
+
+}

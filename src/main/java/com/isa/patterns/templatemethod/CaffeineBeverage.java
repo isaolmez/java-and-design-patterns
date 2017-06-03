@@ -25,12 +25,18 @@ public abstract class CaffeineBeverage {
     System.out.println("Pouring in...");
   }
 
-  /** Some hooks */
-  public void preBoil() {}
+  /**
+   * Some hooks
+   */
+  public void preBoil() {
+  }
 
-  public void postBoil() {}
+  public void postBoil() {
+  }
 
-  public void preBrew() {}
+  public void preBrew() {
+  }
 
-  public void postBrew() {}
+  public void postBrew() {
+  }
 }

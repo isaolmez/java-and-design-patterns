@@ -1,6 +1,7 @@
 package com.isa.patterns.factory.simplefactory;
 
 public class SimplePizzaFactory {
+
   public Pizza createPizza(String type) {
     Pizza pizza = null;
 

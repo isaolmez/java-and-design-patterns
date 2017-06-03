@@ -1,6 +1,7 @@
 package com.isa.patterns.composite;
 
 public class MenuItem extends MenuComponent {
+
   private String name;
   private String description;
   private double price;

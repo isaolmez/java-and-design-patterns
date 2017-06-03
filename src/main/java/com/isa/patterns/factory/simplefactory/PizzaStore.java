@@ -1,6 +1,7 @@
 package com.isa.patterns.factory.simplefactory;
 
 public class PizzaStore {
+
   SimplePizzaFactory factory;
 
   public PizzaStore(SimplePizzaFactory factory) {

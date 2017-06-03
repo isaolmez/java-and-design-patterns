@@ -1,6 +1,7 @@
 package com.isa.patterns.bridge;
 
 public class ClientMain {
+
   public static void main(String[] args) {
     ConcreteRemoteControl remoteControl = new ConcreteRemoteControl(new ColoredTelevision());
     remoteControl.on();

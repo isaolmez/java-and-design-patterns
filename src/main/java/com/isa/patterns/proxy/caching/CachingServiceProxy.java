@@ -5,6 +5,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
 public class CachingServiceProxy implements Service {
+
   private final Service service;
 
   private volatile ConcurrentMap<String, List<String>> cache;

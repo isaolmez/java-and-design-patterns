@@ -1,6 +1,7 @@
 package com.isa.patterns.command;
 
 public class ClientMain {
+
   public static void main(String[] args) {
     Light light = new Light();
     LightOnCommand onCommand = new LightOnCommand(light);

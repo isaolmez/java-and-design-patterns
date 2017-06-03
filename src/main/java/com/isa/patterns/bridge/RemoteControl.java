@@ -1,6 +1,7 @@
 package com.isa.patterns.bridge;
 
 public abstract class RemoteControl {
+
   protected Television television;
 
   public RemoteControl(Television television) {

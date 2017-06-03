@@ -1,6 +1,7 @@
 package com.isa.patterns.factory.abstractfactory;
 
 public abstract class PizzaStore {
+
   public Pizza orderPizza(String type) {
     Pizza pizza = createPizza(type);
     pizza.prepare();

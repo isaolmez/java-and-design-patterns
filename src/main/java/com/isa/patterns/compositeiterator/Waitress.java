@@ -3,6 +3,7 @@ package com.isa.patterns.compositeiterator;
 import java.util.Iterator;
 
 public class Waitress {
+
   private MenuComponent topMenu;
 
   public Waitress(MenuComponent topMenu) {

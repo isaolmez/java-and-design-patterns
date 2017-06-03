@@ -1,6 +1,7 @@
 package com.isa.patterns.adapter;
 
 public class ClientMain {
+
   public static void main(String[] args) {
     Duck duck = new MallardDuck();
     Turkey turkey = new WildTurkey();

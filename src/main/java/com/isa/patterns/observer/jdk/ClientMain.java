@@ -3,6 +3,7 @@ package com.isa.patterns.observer.jdk;
 import java.util.Random;
 
 public class ClientMain {
+
   public static void main(String[] args) {
     WeatherData weatherData = new WeatherData();
     CurrentConditions c = new CurrentConditions();

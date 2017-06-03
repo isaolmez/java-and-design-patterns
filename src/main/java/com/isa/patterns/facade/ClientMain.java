@@ -1,6 +1,7 @@
 package com.isa.patterns.facade;
 
 public class ClientMain {
+
   public static void main(String[] args) {
     Amplifier amp = new Amplifier();
     Tuner tuner = new Tuner();

@@ -1,7 +1,10 @@
 package com.isa.patterns.singleton.lazy.v2;
 
-/** Double-checked locking. Lazy init. Thread-safe */
+/**
+ * Double-checked locking. Lazy init. Thread-safe
+ */
 public class Singleton {
+
   private static volatile Singleton instance;
 
   private Singleton() {

@@ -1,6 +1,7 @@
 package com.isa.patterns.state;
 
 public class GumballMachine {
+
   private State noQuarterState;
   private State soldOutState;
   private State soldState;

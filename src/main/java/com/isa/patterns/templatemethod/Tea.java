@@ -1,6 +1,7 @@
 package com.isa.patterns.templatemethod;
 
 public class Tea extends CaffeineBeverage {
+
   @Override
   public void preBrew() {
     System.out.println("Shake the tea");

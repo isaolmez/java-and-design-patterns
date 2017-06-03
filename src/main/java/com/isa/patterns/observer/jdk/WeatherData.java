@@ -3,6 +3,7 @@ package com.isa.patterns.observer.jdk;
 import java.util.Observable;
 
 public class WeatherData extends Observable {
+
   private float temp;
   private float humidity;
   private float pressure;

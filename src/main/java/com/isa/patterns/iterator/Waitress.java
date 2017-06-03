@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Waitress {
+
   List<Menu<MenuItem>> menus;
 
   public Waitress() {

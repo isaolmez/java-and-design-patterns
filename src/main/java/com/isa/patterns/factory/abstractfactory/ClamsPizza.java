@@ -1,6 +1,7 @@
 package com.isa.patterns.factory.abstractfactory;
 
 public class ClamsPizza extends Pizza {
+
   private PizzaIngredientFactory ingredientFactory;
 
   public ClamsPizza(PizzaIngredientFactory ingredientFactory) {
