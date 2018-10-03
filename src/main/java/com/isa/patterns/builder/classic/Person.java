@@ -14,12 +14,12 @@ public class Person {
 
   private final int age;
 
-  private final Profession profession;
+  private final String profession;
 
   private final List<String> hobbies;
 
   private Person(
-      String name, String lastName, int age, Profession profession, List<String> hobbies) {
+      String name, String lastName, int age, String profession, List<String> hobbies) {
     this.name = name;
     this.lastName = lastName;
     this.age = age;
@@ -39,7 +39,7 @@ public class Person {
     return age;
   }
 
-  public Profession getProfession() {
+  public String getProfession() {
     return profession;
   }
 
@@ -70,7 +70,7 @@ public class Person {
 
     private int age;
 
-    private Profession profession;
+    private String profession;
 
     private List<String> hobbies = new ArrayList<>();
 
@@ -88,7 +88,7 @@ public class Person {
       return this;
     }
 
-    public Builder profession(Profession profession) {
+    public Builder profession(String profession) {
       if (profession == null) {
         throw new IllegalArgumentException("Profession cannot be empty");
       }

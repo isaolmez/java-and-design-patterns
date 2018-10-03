@@ -6,7 +6,7 @@ public class ClientMain {
     Person person =
         new Person.Builder("John", "Doe")
             .age(20)
-            .profession(Profession.ENGINEER)
+            .profession("Engineer")
             .add("Fishing")
             .add("Games")
             .add("Football")
@@ -16,7 +16,7 @@ public class ClientMain {
     Person person2 =
         Person.of("Jane", "Doe")
             .age(20)
-            .profession(Profession.DOCTOR)
+            .profession("Doctor")
             .add("Fishing")
             .add("Games")
             .add("Football")
