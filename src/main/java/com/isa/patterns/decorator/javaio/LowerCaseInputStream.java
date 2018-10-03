@@ -6,21 +6,21 @@ import java.io.InputStream;
 
 public class LowerCaseInputStream extends FilterInputStream {
 
-  public LowerCaseInputStream(InputStream in) {
-    super(in);
-  }
-
-  public int read() throws IOException {
-    int readByte = in.read();
-    return readByte == -1 ? readByte : Character.toLowerCase((char) readByte);
-  }
-
-  public int read(byte b[], int offset, int len) throws IOException {
-    int result = super.read(b, offset, len);
-    for (int i = 0; i < result; i++) {
-      b[i] = (byte) Character.toLowerCase((char) b[i]);
+    public LowerCaseInputStream(InputStream in) {
+        super(in);
     }
 
-    return result;
-  }
+    public int read() throws IOException {
+        int readByte = in.read();
+        return readByte == -1 ? readByte : Character.toLowerCase((char) readByte);
+    }
+
+    public int read(byte b[], int offset, int len) throws IOException {
+        int result = super.read(b, offset, len);
+        for (int i = 0; i < result; i++) {
+            b[i] = (byte) Character.toLowerCase((char) b[i]);
+        }
+
+        return result;
+    }
 }

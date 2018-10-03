@@ -2,11 +2,11 @@ package com.isa.patterns.proxy.protecting;
 
 public interface User {
 
-  void login();
+    void login();
 
-  void read();
+    void read();
 
-  void update();
+    void update();
 
-  void delete();
+    void delete();
 }

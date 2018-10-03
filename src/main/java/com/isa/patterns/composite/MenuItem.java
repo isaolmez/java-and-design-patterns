@@ -2,65 +2,65 @@ package com.isa.patterns.composite;
 
 public class MenuItem extends MenuComponent {
 
-  private String name;
-  private String description;
-  private double price;
-  private boolean isVegetarian;
+    private String name;
+    private String description;
+    private double price;
+    private boolean isVegetarian;
 
-  public MenuItem(String name, String description, double price, boolean isVegetarian) {
-    this.name = name;
-    this.description = description;
-    this.price = price;
-    this.isVegetarian = isVegetarian;
-  }
+    public MenuItem(String name, String description, double price, boolean isVegetarian) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.isVegetarian = isVegetarian;
+    }
 
-  @Override
-  public String getName() {
-    return name;
-  }
+    @Override
+    public String getName() {
+        return name;
+    }
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-  @Override
-  public String getDescription() {
-    return description;
-  }
+    @Override
+    public String getDescription() {
+        return description;
+    }
 
-  public void setDescription(String description) {
-    this.description = description;
-  }
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-  @Override
-  public double getPrice() {
-    return price;
-  }
+    @Override
+    public double getPrice() {
+        return price;
+    }
 
-  public void setPrice(double price) {
-    this.price = price;
-  }
+    public void setPrice(double price) {
+        this.price = price;
+    }
 
-  @Override
-  public boolean isVegetarian() {
-    return isVegetarian;
-  }
+    @Override
+    public boolean isVegetarian() {
+        return isVegetarian;
+    }
 
-  public void setVegetarian(boolean isVegetarian) {
-    this.isVegetarian = isVegetarian;
-  }
+    public void setVegetarian(boolean isVegetarian) {
+        this.isVegetarian = isVegetarian;
+    }
 
-  @Override
-  public void print() {
-    System.out.println(
-        "MenuItem [name="
-            + name
-            + ", description="
-            + description
-            + ", price="
-            + price
-            + ", isVegetarian="
-            + isVegetarian
-            + "]");
-  }
+    @Override
+    public void print() {
+        System.out.println(
+                "MenuItem [name="
+                        + name
+                        + ", description="
+                        + description
+                        + ", price="
+                        + price
+                        + ", isVegetarian="
+                        + isVegetarian
+                        + "]");
+    }
 }

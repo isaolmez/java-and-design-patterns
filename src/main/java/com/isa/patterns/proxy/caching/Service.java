@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface Service {
 
-  List<String> getUsers(String country);
+    List<String> getUsers(String country);
 
-  int getAccessCount();
+    int getAccessCount();
 }

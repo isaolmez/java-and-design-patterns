@@ -2,11 +2,11 @@ package com.isa.patterns.factory.abstractfactory;
 
 public interface PizzaIngredientFactory {
 
-  Dough getDough();
+    Dough getDough();
 
-  Sauce getSauce();
+    Sauce getSauce();
 
-  Cheese getCheese();
+    Cheese getCheese();
 
-  Clams getClams();
+    Clams getClams();
 }

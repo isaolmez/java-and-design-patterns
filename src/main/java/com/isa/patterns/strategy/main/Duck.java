@@ -7,37 +7,37 @@ import com.isa.patterns.strategy.algorithms.Quackable;
 
 public class Duck {
 
-  // Members that store changing algorithms
-  private Flyable flyBehavior;
-  private Quackable quackBehavior;
+    // Members that store changing algorithms
+    private Flyable flyBehavior;
+    private Quackable quackBehavior;
 
-  public Duck() {
-    flyBehavior = new FlyNoWay();
-    quackBehavior = new MuteQuack();
-  }
+    public Duck() {
+        flyBehavior = new FlyNoWay();
+        quackBehavior = new MuteQuack();
+    }
 
-  public void swim() {
-    System.out.println("Swimming...");
-  }
+    public void swim() {
+        System.out.println("Swimming...");
+    }
 
-  public void display() {
-    System.out.println("Duck");
-  }
+    public void display() {
+        System.out.println("Duck");
+    }
 
-  public void setFlyBehavior(Flyable flyBehavior) {
-    this.flyBehavior = flyBehavior;
-  }
+    public void setFlyBehavior(Flyable flyBehavior) {
+        this.flyBehavior = flyBehavior;
+    }
 
-  public void setQuackBehavior(Quackable quackBehavior) {
-    this.quackBehavior = quackBehavior;
-  }
+    public void setQuackBehavior(Quackable quackBehavior) {
+        this.quackBehavior = quackBehavior;
+    }
 
-  // Call specific strategy by delegating the responsibility
-  public void performFly() {
-    flyBehavior.fly();
-  }
+    // Call specific strategy by delegating the responsibility
+    public void performFly() {
+        flyBehavior.fly();
+    }
 
-  public void performQuack() {
-    quackBehavior.quack();
-  }
+    public void performQuack() {
+        quackBehavior.quack();
+    }
 }

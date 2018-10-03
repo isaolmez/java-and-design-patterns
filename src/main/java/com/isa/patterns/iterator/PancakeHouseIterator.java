@@ -4,20 +4,20 @@ import java.util.List;
 
 public class PancakeHouseIterator implements Iterator<MenuItem> {
 
-  private List<MenuItem> menu;
-  private int position;
+    private List<MenuItem> menu;
+    private int position;
 
-  public PancakeHouseIterator(List<MenuItem> menu) {
-    this.menu = menu;
-  }
+    public PancakeHouseIterator(List<MenuItem> menu) {
+        this.menu = menu;
+    }
 
-  @Override
-  public boolean hasNext() {
-    return position < menu.size();
-  }
+    @Override
+    public boolean hasNext() {
+        return position < menu.size();
+    }
 
-  @Override
-  public MenuItem next() {
-    return menu.get(position++);
-  }
+    @Override
+    public MenuItem next() {
+        return menu.get(position++);
+    }
 }

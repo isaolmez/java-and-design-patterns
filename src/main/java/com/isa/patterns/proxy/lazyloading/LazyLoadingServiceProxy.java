@@ -2,16 +2,16 @@ package com.isa.patterns.proxy.lazyloading;
 
 public class LazyLoadingServiceProxy implements ExpensiveService {
 
-  @Override
-  public void create() {
-    ValueHolder.INSTANCE.create();
-  }
-
-  private static class ValueHolder {
-
-    private ValueHolder() {
+    @Override
+    public void create() {
+        ValueHolder.INSTANCE.create();
     }
 
-    static final ExpensiveService INSTANCE = new ExpensiveServiceImpl();
-  }
+    private static class ValueHolder {
+
+        private ValueHolder() {
+        }
+
+        static final ExpensiveService INSTANCE = new ExpensiveServiceImpl();
+    }
 }

@@ -2,7 +2,7 @@ package com.isa.patterns.adapter;
 
 public interface Duck {
 
-  void quack();
+    void quack();
 
-  void fly();
+    void fly();
 }

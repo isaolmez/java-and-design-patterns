@@ -4,20 +4,20 @@ import java.util.LinkedList;
 
 public class DinerMenuIterator implements Iterator<MenuItem> {
 
-  private LinkedList<MenuItem> menu;
-  private int position;
+    private LinkedList<MenuItem> menu;
+    private int position;
 
-  public DinerMenuIterator(LinkedList<MenuItem> menu) {
-    this.menu = menu;
-  }
+    public DinerMenuIterator(LinkedList<MenuItem> menu) {
+        this.menu = menu;
+    }
 
-  @Override
-  public boolean hasNext() {
-    return position < menu.size();
-  }
+    @Override
+    public boolean hasNext() {
+        return position < menu.size();
+    }
 
-  @Override
-  public MenuItem next() {
-    return menu.get(position++);
-  }
+    @Override
+    public MenuItem next() {
+        return menu.get(position++);
+    }
 }

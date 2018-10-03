@@ -8,7 +8,6 @@ import com.isa.patterns.chainofresponsibility.independent.Output;
 import com.isa.patterns.chainofresponsibility.independent.ReplaceFilter;
 import com.isa.patterns.chainofresponsibility.independent.UpperCaseFilter;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 

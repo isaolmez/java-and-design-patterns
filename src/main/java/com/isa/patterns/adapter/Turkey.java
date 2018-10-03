@@ -2,7 +2,7 @@ package com.isa.patterns.adapter;
 
 public interface Turkey {
 
-  void gobble();
+    void gobble();
 
-  void fly();
+    void fly();
 }

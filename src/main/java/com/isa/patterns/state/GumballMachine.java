@@ -2,81 +2,81 @@ package com.isa.patterns.state;
 
 public class GumballMachine {
 
-  private State noQuarterState;
-  private State soldOutState;
-  private State soldState;
-  private State hasQuarterState;
-  private State state = soldOutState;
-  private int gumballCount;
+    private State noQuarterState;
+    private State soldOutState;
+    private State soldState;
+    private State hasQuarterState;
+    private State state = soldOutState;
+    private int gumballCount;
 
-  public GumballMachine(int gumballCount) {
-    this.noQuarterState = new NoQuarterState(this);
-    this.soldOutState = new SoldOutState(this);
-    this.soldState = new SoldState(this);
-    this.hasQuarterState = new HasQuarterState(this);
-    this.gumballCount = gumballCount;
+    public GumballMachine(int gumballCount) {
+        this.noQuarterState = new NoQuarterState(this);
+        this.soldOutState = new SoldOutState(this);
+        this.soldState = new SoldState(this);
+        this.hasQuarterState = new HasQuarterState(this);
+        this.gumballCount = gumballCount;
 
-    if (gumballCount > 0) {
-      state = noQuarterState;
-    } else {
-      state = soldOutState;
+        if (gumballCount > 0) {
+            state = noQuarterState;
+        } else {
+            state = soldOutState;
+        }
     }
-  }
 
-  public void insertQuarter() {
-    state.insertQuarter();
-  }
-
-  public void ejectQuarter() {
-    state.ejectQuarter();
-  }
-
-  public void turnCrank() {
-    state.turnCrank();
-    state.dispense();
-  }
-
-  public void releaseBall() {
-    System.out.println("Releasing the ball");
-    if (gumballCount != 0) {
-      gumballCount--;
+    public void insertQuarter() {
+        state.insertQuarter();
     }
-  }
 
-  public State getState() {
-    return state;
-  }
+    public void ejectQuarter() {
+        state.ejectQuarter();
+    }
 
-  public void setState(State state) {
-    this.state = state;
-  }
+    public void turnCrank() {
+        state.turnCrank();
+        state.dispense();
+    }
 
-  public int getGumballCount() {
-    return gumballCount;
-  }
+    public void releaseBall() {
+        System.out.println("Releasing the ball");
+        if (gumballCount != 0) {
+            gumballCount--;
+        }
+    }
 
-  public void setGumballCount(int gumballCount) {
-    this.gumballCount = gumballCount;
-  }
+    public State getState() {
+        return state;
+    }
 
-  public State getNoQuarterState() {
-    return noQuarterState;
-  }
+    public void setState(State state) {
+        this.state = state;
+    }
 
-  public State getSoldOutState() {
-    return soldOutState;
-  }
+    public int getGumballCount() {
+        return gumballCount;
+    }
 
-  public State getSoldState() {
-    return soldState;
-  }
+    public void setGumballCount(int gumballCount) {
+        this.gumballCount = gumballCount;
+    }
 
-  public State getHasQuarterState() {
-    return hasQuarterState;
-  }
+    public State getNoQuarterState() {
+        return noQuarterState;
+    }
 
-  @Override
-  public String toString() {
-    return "GumballMachine [state=" + state + ", gumballCount=" + gumballCount + "]";
-  }
+    public State getSoldOutState() {
+        return soldOutState;
+    }
+
+    public State getSoldState() {
+        return soldState;
+    }
+
+    public State getHasQuarterState() {
+        return hasQuarterState;
+    }
+
+    @Override
+    public String toString() {
+        return "GumballMachine [state=" + state + ", gumballCount=" + gumballCount + "]";
+    }
 }

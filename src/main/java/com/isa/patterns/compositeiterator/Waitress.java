@@ -4,16 +4,16 @@ import java.util.Iterator;
 
 public class Waitress {
 
-  private MenuComponent topMenu;
+    private MenuComponent topMenu;
 
-  public Waitress(MenuComponent topMenu) {
-    this.topMenu = topMenu;
-  }
-
-  public void print() {
-    Iterator<MenuComponent> iter = topMenu.createIterator();
-    while (iter.hasNext()) {
-      iter.next().print();
+    public Waitress(MenuComponent topMenu) {
+        this.topMenu = topMenu;
     }
-  }
+
+    public void print() {
+        Iterator<MenuComponent> iter = topMenu.createIterator();
+        while (iter.hasNext()) {
+            iter.next().print();
+        }
+    }
 }
