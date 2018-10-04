@@ -3,6 +3,7 @@ package com.isa.patterns.telescopingconstructor;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public class Person {
 
@@ -58,20 +59,12 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{"
-                + "name='"
-                + name
-                + '\''
-                + ", lastName='"
-                + lastName
-                + '\''
-                + ", age="
-                + age
-                + ", profession='"
-                + profession
-                + '\''
-                + ", hobbies="
-                + hobbies
-                + '}';
+        return new ToStringBuilder(this)
+                .append("Name", name)
+                .append("Last Name", lastName)
+                .append("Age", age)
+                .append("Profession", profession)
+                .append("Hobbies", hobbies)
+                .toString();
     }
 }

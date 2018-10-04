@@ -51,6 +51,9 @@ public class Person {
         return new ToStringBuilder(this)
                 .append("Name", name)
                 .append("Last Name", lastName)
+                .append("Age", age)
+                .append("Profession", profession)
+                .append("Hobbies", hobbies)
                 .toString();
     }
 

@@ -36,7 +36,7 @@ public abstract class Profession {
     @Override
     public String toString() {
         return new ToStringBuilder(this)
-                .append("name", name)
+                .append("Name", name)
                 .append("Salary", salary)
                 .append("Duties", duties)
                 .toString();
