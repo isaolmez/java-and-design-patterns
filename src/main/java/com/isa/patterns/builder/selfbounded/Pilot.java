@@ -1,16 +1,18 @@
-package com.isa.patterns.builder.inherited;
+package com.isa.patterns.builder.selfbounded;
 
 import java.util.List;
 
 public class Pilot extends Profession {
 
-    public Pilot(String name, double salary, List<String> duties) {
+    private final String language;
+
+    public Pilot(String name, double salary, List<String> duties, String language) {
         super(name, salary, duties);
+        this.language = language;
     }
 
     @Override
     public void work() {
         System.out.println("Flying the plane...");
     }
-
 }

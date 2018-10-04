@@ -23,7 +23,7 @@ public class ProfessionBuilders {
 
         @Override
         protected Pilot internalBuild() {
-            return new Pilot(this.name, this.salary, this.isPrivateSector, this.duties);
+            return new Pilot(this.name, this.salary, this.duties);
         }
     }
 
@@ -34,18 +34,15 @@ public class ProfessionBuilders {
 
         @Override
         protected Engineer internalBuild() {
-            return new Engineer(this.name, this.salary, this.isPrivateSector, this.duties);
+            return new Engineer(this.name, this.salary, this.duties);
         }
     }
 
-    abstract static class AbstractProfessionBuilder<T extends Profession>
-            implements ProfessionBuilder<T> {
+    abstract static class AbstractProfessionBuilder<T extends Profession> implements ProfessionBuilder<T> {
 
         String name;
 
         double salary;
-
-        boolean isPrivateSector;
 
         List<String> duties = new ArrayList<>();
 

@@ -1,11 +1,14 @@
-package com.isa.patterns.builder.inherited;
+package com.isa.patterns.builder.selfbounded;
 
 import java.util.List;
 
 public class Engineer extends Profession {
 
-    public Engineer(String name, double salary, List<String> duties) {
+    private final String tools;
+
+    public Engineer(String name, double salary, List<String> duties, String tools) {
         super(name, salary, duties);
+        this.tools = tools;
     }
 
     @Override
