@@ -9,9 +9,6 @@ public class LazyLoadingServiceProxy implements ExpensiveService {
 
     private static class ValueHolder {
 
-        private ValueHolder() {
-        }
-
         static final ExpensiveService INSTANCE = new ExpensiveServiceImpl();
     }
 }
