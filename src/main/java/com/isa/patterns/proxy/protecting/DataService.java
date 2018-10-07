@@ -1,8 +1,6 @@
 package com.isa.patterns.proxy.protecting;
 
-public interface User {
-
-    void login();
+public interface DataService {
 
     void read();
 

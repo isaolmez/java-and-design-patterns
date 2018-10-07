@@ -4,16 +4,16 @@ import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
-public class CachingServiceProxy implements Service {
+public class CachingUserServiceProxy implements UserService {
 
-    private final Service service;
+    private final UserService userService;
 
-    private volatile ConcurrentMap<String, List<String>> cache;
+    private final ConcurrentMap<String, List<String>> cache;
 
-    private Object writeLock = new Object();
+    private final Object writeLock = new Object();
 
-    public CachingServiceProxy(Service service) {
-        this.service = service;
+    public CachingUserServiceProxy(UserService userService) {
+        this.userService = userService;
         this.cache = new ConcurrentHashMap<>();
     }
 
@@ -22,7 +22,7 @@ public class CachingServiceProxy implements Service {
         if (!cache.containsKey(country)) {
             synchronized (writeLock) {
                 if (!cache.containsKey(country)) {
-                    List<String> users = service.getUsers(country);
+                    List<String> users = userService.getUsers(country);
                     cache.put(country, users);
                 }
             }
@@ -33,6 +33,6 @@ public class CachingServiceProxy implements Service {
 
     @Override
     public int getAccessCount() {
-        return service.getAccessCount();
+        return userService.getAccessCount();
     }
 }

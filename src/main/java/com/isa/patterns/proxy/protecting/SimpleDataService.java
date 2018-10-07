@@ -1,11 +1,6 @@
 package com.isa.patterns.proxy.protecting;
 
-public class SimpleUser implements User {
-
-    @Override
-    public void login() {
-        System.out.println("Logged in...");
-    }
+public class SimpleDataService implements DataService {
 
     @Override
     public void read() {
