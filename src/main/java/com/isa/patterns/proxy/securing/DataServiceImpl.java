@@ -1,6 +1,6 @@
-package com.isa.patterns.proxy.protecting;
+package com.isa.patterns.proxy.securing;
 
-public class SimpleDataService implements DataService {
+public class DataServiceImpl implements DataService {
 
     @Override
     public void read() {
