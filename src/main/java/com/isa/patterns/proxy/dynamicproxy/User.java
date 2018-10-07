@@ -1,12 +1,16 @@
 package com.isa.patterns.proxy.dynamicproxy;
 
-public interface User {
+import java.util.List;
 
-    void login();
+public class User {
 
-    void read();
+    private List<String> roles;
 
-    void update();
+    public List<String> getRoles() {
+        return roles;
+    }
 
-    void delete();
+    public void setRoles(List<String> roles) {
+        this.roles = roles;
+    }
 }

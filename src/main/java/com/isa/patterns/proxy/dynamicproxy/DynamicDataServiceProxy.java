@@ -1,4 +1,4 @@
-package com.isa.patterns.proxy.securingdynamic;
+package com.isa.patterns.proxy.dynamicproxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

@@ -1,4 +1,4 @@
-package com.isa.patterns.proxy.securingdynamic;
+package com.isa.patterns.proxy.dynamicproxy;
 
 public interface DataService {
 

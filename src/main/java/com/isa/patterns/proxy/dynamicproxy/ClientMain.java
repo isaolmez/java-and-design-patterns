@@ -1,60 +1,34 @@
 package com.isa.patterns.proxy.dynamicproxy;
 
+import com.google.common.collect.Lists;
 import java.lang.reflect.Proxy;
-import java.util.HashSet;
-import java.util.Set;
 
 public class ClientMain {
 
     public static void main(String[] args) {
-        User user = new SimpleUser();
-        User readOnlyUser = getReadOnlyProxy(user);
-        User adminUser = getAdminProxy(user);
-        User genericUser = getGenericProxy(user);
+        DataService dataService = new DataServiceImpl();
+        System.out.println("Read-only user...");
+        User readOnlyUser = new User();
+        readOnlyUser.setRoles(Lists.newArrayList("read"));
+        DataService dataServiceProxy = getDynamicProxy(dataService, readOnlyUser);
+        dataServiceProxy.read();
+        dataServiceProxy.update();
+        dataServiceProxy.delete();
 
-        System.out.println("---Read only user");
-        readOnlyUser.login();
-        readOnlyUser.read();
-        readOnlyUser.update();
-        readOnlyUser.delete();
-
-        System.out.println("---Admin user");
-        adminUser.login();
-        adminUser.read();
-        adminUser.update();
-        adminUser.delete();
-
-        System.out.println("---Generic user");
-        genericUser.login();
-        genericUser.read();
-        genericUser.update();
-        genericUser.delete();
+        System.out.println("Admin user...");
+        User adminUser = new User();
+        adminUser.setRoles(Lists.newArrayList("read", "update", "delete"));
+        dataServiceProxy = getDynamicProxy(dataService, adminUser);
+        dataServiceProxy.read();
+        dataServiceProxy.update();
+        dataServiceProxy.delete();
     }
 
-    private static User getReadOnlyProxy(User user) {
-        return (User)
+    private static DataService getDynamicProxy(DataService dataService, User user) {
+        return (DataService)
                 Proxy.newProxyInstance(
-                        user.getClass().getClassLoader(),
-                        user.getClass().getInterfaces(),
-                        new ReadOnlyInvocationHandler(user));
-    }
-
-    private static User getAdminProxy(User user) {
-        return (User)
-                Proxy.newProxyInstance(
-                        user.getClass().getClassLoader(),
-                        user.getClass().getInterfaces(),
-                        new AdminInvocationHandler(user));
-    }
-
-    private static User getGenericProxy(User user) {
-        Set<String> permissions = new HashSet<>();
-        permissions.add("read");
-        permissions.add("update");
-        return (User)
-                Proxy.newProxyInstance(
-                        user.getClass().getClassLoader(),
-                        user.getClass().getInterfaces(),
-                        new GenericInvocationHandler(user, permissions));
+                        dataService.getClass().getClassLoader(),
+                        dataService.getClass().getInterfaces(),
+                        new DynamicDataServiceProxy(dataService, user));
     }
 }
