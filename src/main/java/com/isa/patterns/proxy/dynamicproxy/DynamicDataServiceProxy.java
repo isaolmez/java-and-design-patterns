@@ -17,8 +17,8 @@ public class DynamicDataServiceProxy implements InvocationHandler {
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         Authorized authorized = method.getDeclaredAnnotation(Authorized.class);
         if (authorized != null) {
-            String[] allowedRoles = authorized.allowed();
-            if (isAllowed(allowedRoles)) {
+            String[] allowedPrivileges = authorized.allowed();
+            if (isAllowed(allowedPrivileges)) {
                 return method.invoke(dataService, args);
             } else {
                 return null;
@@ -28,9 +28,9 @@ public class DynamicDataServiceProxy implements InvocationHandler {
         return method.invoke(dataService, args);
     }
 
-    private boolean isAllowed(String[] allowedRoles) {
-        for (String allowedRole : allowedRoles) {
-            if (user.getRoles().contains(allowedRole)) {
+    private boolean isAllowed(String[] allowedPrivileges) {
+        for (String allowedPrivilege : allowedPrivileges) {
+            if (user.getPrivileges().contains(allowedPrivilege)) {
                 return true;
             }
         }

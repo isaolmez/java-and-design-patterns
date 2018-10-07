@@ -9,7 +9,7 @@ public class ClientMain {
         DataService dataService = new DataServiceImpl();
         System.out.println("Read-only user...");
         User readOnlyUser = new User();
-        readOnlyUser.setRoles(Lists.newArrayList("read"));
+        readOnlyUser.setPrivileges(Lists.newArrayList("read"));
         DataService dataServiceProxy = getDynamicProxy(dataService, readOnlyUser);
         dataServiceProxy.read();
         dataServiceProxy.update();
@@ -17,7 +17,7 @@ public class ClientMain {
 
         System.out.println("Admin user...");
         User adminUser = new User();
-        adminUser.setRoles(Lists.newArrayList("read", "update", "delete"));
+        adminUser.setPrivileges(Lists.newArrayList("read", "update", "delete"));
         dataServiceProxy = getDynamicProxy(dataService, adminUser);
         dataServiceProxy.read();
         dataServiceProxy.update();

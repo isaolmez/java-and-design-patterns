@@ -4,13 +4,13 @@ import java.util.List;
 
 public class User {
 
-    private List<String> roles;
+    private List<String> privileges;
 
-    public List<String> getRoles() {
-        return roles;
+    public List<String> getPrivileges() {
+        return privileges;
     }
 
-    public void setRoles(List<String> roles) {
-        this.roles = roles;
+    public void setPrivileges(List<String> privileges) {
+        this.privileges = privileges;
     }
 }
