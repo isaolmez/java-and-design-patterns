@@ -1,9 +1,11 @@
 package com.isa.patterns.decorator;
 
-// This is the base component class in decorator pattern
+/**
+ * This is the base component class in decorator pattern.
+ */
 public abstract class Beverage {
 
-    String description = "Unknown Beverage";
+    protected String description = "Unknown Beverage";
 
     /**
      * This will be reused for concrete components by changing only description variable, not with overriding. But for condiments code will

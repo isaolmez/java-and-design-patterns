@@ -2,7 +2,7 @@ package com.isa.patterns.decorator;
 
 public class Whip extends CondimentDecorator {
 
-    Beverage beverage;
+    private final Beverage beverage;
 
     public Whip(Beverage beverage) {
         this.beverage = beverage;

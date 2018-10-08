@@ -2,7 +2,7 @@ package com.isa.patterns.decorator;
 
 public class SteamedMilk extends CondimentDecorator {
 
-    Beverage beverage;
+    private final Beverage beverage;
 
     public SteamedMilk(Beverage beverage) {
         this.beverage = beverage;

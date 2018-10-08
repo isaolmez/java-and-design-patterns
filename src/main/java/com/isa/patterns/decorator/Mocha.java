@@ -2,7 +2,7 @@ package com.isa.patterns.decorator;
 
 public class Mocha extends CondimentDecorator {
 
-    Beverage beverage;
+    private final Beverage beverage;
 
     public Mocha(Beverage beverage) {
         this.beverage = beverage;
