@@ -1,4 +1,4 @@
-package com.isa.patterns.observer.custom;
+package com.isa.patterns.observer.classic;
 
 public class ForecastDisplay implements Observer {
 

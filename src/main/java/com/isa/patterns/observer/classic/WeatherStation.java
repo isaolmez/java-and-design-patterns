@@ -1,16 +1,16 @@
-package com.isa.patterns.observer.custom;
+package com.isa.patterns.observer.classic;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class WeatherData implements Subject {
+public class WeatherStation implements Subject {
 
-    private List<Observer> observers;
+    private final List<Observer> observers;
     private float temp;
     private float humidity;
     private float pressure;
 
-    public WeatherData() {
+    public WeatherStation() {
         observers = new ArrayList<>();
     }
 
