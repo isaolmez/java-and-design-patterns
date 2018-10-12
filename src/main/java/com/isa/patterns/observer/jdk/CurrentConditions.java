@@ -10,9 +10,9 @@ public class CurrentConditions implements Observer {
         if (arg != null) { // PUSH Style
             System.out.println(arg);
         } else { // PULL Style
-            if (o instanceof WeatherData) {
-                WeatherData w = (WeatherData) o;
-                System.out.printf("%f\t%f\t%f\n", w.getTemp(), w.getHumidity(), w.getPressure());
+            if (o instanceof WeatherStation) {
+                WeatherStation w = (WeatherStation) o;
+                System.out.printf("%f\t%f\t%f%n", w.getTemp(), w.getHumidity(), w.getPressure());
             }
         }
     }

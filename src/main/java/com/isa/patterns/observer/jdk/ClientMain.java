@@ -5,18 +5,17 @@ import java.util.Random;
 public class ClientMain {
 
     public static void main(String[] args) {
-        WeatherData weatherData = new WeatherData();
-        CurrentConditions c = new CurrentConditions();
-        ForecastDisplay f = new ForecastDisplay();
-        StatisticsDisplay s = new StatisticsDisplay();
-        StatisticsDisplay s2 = new StatisticsDisplay();
-        weatherData.addObserver(c);
-        weatherData.addObserver(f);
-        weatherData.addObserver(s);
+        WeatherStation weatherStation = new WeatherStation();
+        CurrentConditions currentConditions = new CurrentConditions();
+        ForecastDisplay forecastDisplay = new ForecastDisplay();
+        StatisticsDisplay statisticsDisplay = new StatisticsDisplay();
+        weatherStation.addObserver(currentConditions);
+        weatherStation.addObserver(forecastDisplay);
+        weatherStation.addObserver(statisticsDisplay);
 
         Random random = new Random();
-        for (int i = 0; i < 5; i++) {
-            weatherData.setMeasurements(random.nextFloat(), random.nextFloat(), random.nextFloat());
+        for (int i = 0; i < 3; i++) {
+            weatherStation.setMeasurements(random.nextFloat(), random.nextFloat(), random.nextFloat());
             System.out.println("***************************************");
         }
     }
