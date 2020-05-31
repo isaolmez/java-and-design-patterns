@@ -3,12 +3,12 @@ package com.isa.patterns.decorator;
 public class ClientMain {
 
     public static void main(String[] args) {
-        Beverage b = new Mocha(new Mocha(new Whip(new HouseBlend())));
-        System.out.println(b.getDescription());
-        System.out.println(b.cost());
+        final Beverage beverage = new Mocha(new Mocha(new Whip(new HouseBlend())));
+        System.out.println(beverage.getDescription());
+        System.out.println(beverage.cost());
 
-        b = new Espresso();
-        System.out.println(b.getDescription());
-        System.out.println(b.cost());
+        final Beverage anotherBeverage = new Espresso();
+        System.out.println(anotherBeverage.getDescription());
+        System.out.println(anotherBeverage.cost());
     }
 }

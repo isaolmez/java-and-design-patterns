@@ -7,7 +7,7 @@ public class ClientMain {
 
     public static void main(String[] args) {
         DataService dataService = new DataServiceImpl();
-        System.out.println("Read-only user...");
+        System.out.println("## Read-only user...");
         User readOnlyUser = new User();
         readOnlyUser.setPrivileges(Lists.newArrayList("read"));
         DataService dataServiceProxy = getDynamicProxy(dataService, readOnlyUser);
@@ -15,7 +15,7 @@ public class ClientMain {
         dataServiceProxy.update();
         dataServiceProxy.delete();
 
-        System.out.println("Admin user...");
+        System.out.println("## Admin user...");
         User adminUser = new User();
         adminUser.setPrivileges(Lists.newArrayList("read", "update", "delete"));
         dataServiceProxy = getDynamicProxy(dataService, adminUser);
@@ -26,9 +26,9 @@ public class ClientMain {
 
     private static DataService getDynamicProxy(DataService dataService, User user) {
         return (DataService)
-                Proxy.newProxyInstance(
-                        dataService.getClass().getClassLoader(),
-                        dataService.getClass().getInterfaces(),
-                        new DynamicDataServiceProxy(dataService, user));
+          Proxy.newProxyInstance(
+            dataService.getClass().getClassLoader(),
+            dataService.getClass().getInterfaces(),
+            new DynamicDataServiceProxy(dataService, user));
     }
 }
